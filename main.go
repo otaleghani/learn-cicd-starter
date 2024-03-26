@@ -97,6 +97,3 @@ func main() {
 	log.Fatal(srv.ListenAndServe())
 }
 
-func unuser() {
-	//This function stinks
-}
