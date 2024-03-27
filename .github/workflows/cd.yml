@@ -22,13 +22,13 @@ jobs:
       - name: Build the app
         run: ./scripts/buildprod.sh
 
-      - name: 'auth'
-        uses: 'google-github-actions/auth@v2'
+      - name: auth
+        uses: google-github-actions/auth@v2
           with:
             credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-      - name: 'Set up Cloud SDK'
-        uses: 'google-github-actions/setup-gcloud@v2'
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
 
-      - name: 'Use gcloud CLI'
-        run: 'gcloud builds submit --tag europe-west12-docker.pkg.dev/notely419509/notely-ar-repo/talesign/notely:latest .'
+      - name: Use gcloud CLI
+        run: gcloud builds submit --tag europe-west12-docker.pkg.dev/notely419509/notely-ar-repo/talesign/notely:latest .
